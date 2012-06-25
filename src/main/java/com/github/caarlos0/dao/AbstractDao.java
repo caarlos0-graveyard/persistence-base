@@ -1,6 +1,6 @@
 package com.github.caarlos0.dao;
 
-import com.github.caarlos0.interfaces.Bean;
+import com.github.caarlos0.model.Bean;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
 import java.util.List;

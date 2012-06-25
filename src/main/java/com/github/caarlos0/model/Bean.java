@@ -1,4 +1,4 @@
-package com.github.caarlos0.interfaces;
+package com.github.caarlos0.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
