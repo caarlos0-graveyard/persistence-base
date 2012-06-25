@@ -12,7 +12,7 @@ A base for all your persistence projects, build in top of:
 
 ### Providing
 
-* A MappedSuperclass with @Id and @Version
+* A MappedSuperclass with `@Id` and `@Version`
 * A AbstractDao that provide CRUD operations out of the box
 * A PersistenceInitializer and other helper classes for the Guice setup.
 
