@@ -1,11 +1,7 @@
 package com.github.caarlos0.interfaces;
 
 import java.io.Serializable;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Version;
+import javax.persistence.*;
 
 /**
  * Base class for all your Beans/Models/POJOs or whatever you want to call them.

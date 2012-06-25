@@ -6,5 +6,7 @@ import com.google.inject.Injector;
 public class App {
     public static void main(String[] args) {
         Injector i = PersistenceHelper.getInjector();
+        
+        // bootstrap your app here ;)
     }
 }

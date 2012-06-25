@@ -12,7 +12,7 @@ public class PersistenceModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        install(new JpaPersistModule("base"));
+        install(new JpaPersistModule("base")); // base has to be the PU in persistence.xml
         
         bind(PersistenceInitializer.class);
     }
