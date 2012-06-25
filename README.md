@@ -26,3 +26,7 @@ You may also need to hack:
 
 That's it. If you have any issues, feel free to inform here.
 
+-------------
+
+You can also follow [this tutorial](http://caarlos0.github.com/code/2012/06/25/modular-persistence).
+
