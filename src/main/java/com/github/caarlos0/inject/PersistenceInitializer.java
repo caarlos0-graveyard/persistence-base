@@ -1,15 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.github.caarlos0.inject;
 
 import com.google.inject.Inject;
 import com.google.inject.persist.PersistService;
 
 /**
+ * Utility class that will start the PersistService.
  *
- * @author carlos
+ * @author Carlos A Becker
  */
 public class PersistenceInitializer {
 

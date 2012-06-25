@@ -3,15 +3,26 @@ package com.github.caarlos0.dao;
 import com.github.caarlos0.interfaces.Bean;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
-
+import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import java.util.List;
 
 /**
- *
- * @author carlos
+ * Create your specific DAO extending this class, override the constructor ths way:
+ * 
+ * <code>
+ * public class CursoDao extends AbstractDao<Foo> {
+ *   @Inject
+ *   public CursoDao(Provider<EntityManager> emf) {
+ *       super(emf, Foo.class);
+ *   }
+ * }
+ * </code>
+ * 
+ * In this case, <i>Foo</i> has to extend <code>Bean</code>.
+ * 
+ * @author Carlos A Becker
  */
 public abstract class AbstractDao<T extends Bean> {
    
@@ -31,10 +42,7 @@ public abstract class AbstractDao<T extends Bean> {
     
     @Transactional
     public void save(T t) {
-        if(t.getId() != null)
-            t = em().merge(t);
-        else
-            em().persist(t);
+        t = em().merge(t);
     }
     
     public List<T> findAll() {

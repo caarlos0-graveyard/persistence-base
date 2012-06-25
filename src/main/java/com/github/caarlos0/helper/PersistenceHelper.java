@@ -6,8 +6,9 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 /**
+ * Helper class to get a Singleton of the PersistenceModule.
  *
- * @author carlos
+ * @author Carlos A Becker
  */
 public class PersistenceHelper {
     
