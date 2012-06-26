@@ -39,10 +39,14 @@ public abstract class AbstractDao<T extends Bean> {
         this.emp = emf;
         this.clazz = clazz;
     }
-    
+
     @Transactional
     public void save(T t) {
-        t = em().merge(t);
+        if(t.getId() != null) {
+            t = em().merge(t);
+        } else {
+            em().persist(t);
+        }
     }
     
     public List<T> findAll() {
