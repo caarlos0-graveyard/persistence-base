@@ -26,6 +26,10 @@ public abstract class Bean implements Serializable {
     public Bean() {
     }
 
+    protected Bean(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
