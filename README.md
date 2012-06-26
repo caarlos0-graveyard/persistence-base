@@ -6,15 +6,16 @@ persistence-base
 A base for all your persistence projects, build in top of:
 
 * EclipseLink and JPA2
+* Apache B-Val (bean validation)
 * Google Guice
 * MySQL
 * Apache Maven
 
 ### Providing
 
-* A MappedSuperclass with `@Id` and `@Version`
-* A AbstractDao that provide CRUD operations out of the box
-* A PersistenceInitializer and other helper classes for the Guice setup.
+* A `MappedSuperclass` with `@Id` and `@Version`
+* A `AbstractDao` that provide CRUD operations out of the box
+* A `PersistenceInitializer` and other helper classes for the Guice setup.
 
 ### How-to use
 
