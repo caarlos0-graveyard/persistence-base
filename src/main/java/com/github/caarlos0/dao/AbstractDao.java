@@ -3,10 +3,11 @@ package com.github.caarlos0.dao;
 import com.github.caarlos0.model.Bean;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
-import java.util.List;
+
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.List;
 
 /**
  * Create your specific DAO extending this class, override the constructor ths way:
@@ -26,18 +27,18 @@ import javax.persistence.TypedQuery;
  */
 public abstract class AbstractDao<T extends Bean> {
    
-    
+
+    @Inject
     private Provider<EntityManager> emp;
-    private final Class<T> clazz;
-    
+
     protected EntityManager em() {
         return emp.get();
     }
-    
+
+    protected abstract Class<T> clazz();
+
     @Inject
-    public AbstractDao(Provider<EntityManager> emf, Class<T> clazz) {
-        this.emp = emf;
-        this.clazz = clazz;
+    public AbstractDao() {
     }
 
     @Transactional
@@ -50,12 +51,12 @@ public abstract class AbstractDao<T extends Bean> {
     }
     
     public List<T> findAll() {
-        TypedQuery<T> q = em().createQuery("select e from " + clazz.getSimpleName() + " e", clazz);
+        TypedQuery<T> q = em().createQuery("select e from " + clazz().getSimpleName() + " e", clazz());
         return q.getResultList();
     }
     
     public T find(Long id) {
-        return em().getReference(clazz, id);
+        return em().getReference(clazz(), id);
     }
     
     @Transactional
