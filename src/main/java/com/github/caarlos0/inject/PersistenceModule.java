@@ -1,6 +1,7 @@
 package com.github.caarlos0.inject;
 
 import com.github.caarlos0.Start;
+import com.github.caarlos0.dao.GenericDao;
 import com.github.caarlos0.model.Pessoa;
 import com.google.inject.persist.jpa.JpaPersistModule;
 
@@ -19,7 +20,7 @@ public class PersistenceModule extends AbstractPersistentModule {
 
         bind(Start.class);
 
-        bind(forClazz(Pessoa.class));
+        bindGenericDao(Pessoa.class);
 
     }
     
