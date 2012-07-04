@@ -1,4 +1,4 @@
-package com.github.caarlos0.model;
+package com.github.namekusei.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

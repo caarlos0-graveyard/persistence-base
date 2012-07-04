@@ -1,8 +1,8 @@
-package com.github.caarlos0.inject;
+package com.github.namekusei.inject;
 
-import com.github.caarlos0.dao.Dao;
-import com.github.caarlos0.dao.GenericDao;
-import com.github.caarlos0.model.Bean;
+import com.github.namekusei.dao.Dao;
+import com.github.namekusei.dao.GenericDao;
+import com.github.namekusei.model.Bean;
 import com.google.common.base.Preconditions;
 import com.google.inject.AbstractModule;
 import com.google.inject.Key;

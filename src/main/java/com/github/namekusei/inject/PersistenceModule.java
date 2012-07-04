@@ -1,4 +1,4 @@
-package com.github.caarlos0.inject;
+package com.github.namekusei.inject;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.persist.jpa.JpaPersistModule;
