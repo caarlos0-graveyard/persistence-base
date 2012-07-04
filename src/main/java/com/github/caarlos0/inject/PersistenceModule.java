@@ -1,27 +1,25 @@
 package com.github.caarlos0.inject;
 
-import com.github.caarlos0.Start;
-import com.github.caarlos0.dao.GenericDao;
-import com.github.caarlos0.model.Pessoa;
+import com.google.inject.AbstractModule;
 import com.google.inject.persist.jpa.JpaPersistModule;
 
 /**
- * The persistence module for Guice.
+ * The adapted persistence module for Guice-Persist.
  *
  * @author Carlos A Becker
  */
-public class PersistenceModule extends AbstractPersistentModule {
+public class PersistenceModule extends AbstractModule {
+
+    private final String pu;
+
+    public PersistenceModule(String pu) {
+        this.pu = pu;
+    }
 
     @Override
     protected void configure() {
-        install(new JpaPersistModule("base")); // base has to be the PU in persistence.xml
-        
+        install(new JpaPersistModule(pu));
         bind(PersistenceInitializer.class);
-
-        bind(Start.class);
-
-        bindGenericDao(Pessoa.class);
-
     }
-    
+
 }

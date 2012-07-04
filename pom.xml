@@ -5,8 +5,8 @@
     <groupId>com.github.caarlos0</groupId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Persistence Base</name>
-    <description>A base persistence project with Maven, Eclipse-Link, Apache B-Val, Guice, Guice-Persist and MySQL.</description>
+    <name>Sylvester</name>
+    <description>A persistence base for project, powered by Maven, Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and MySQL.</description>
     <url>http://caarlos0.github.com</url>
     <developers>
         <developer>
@@ -94,6 +94,11 @@
                     <artifactId>persistence-api</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>12.0</version>
         </dependency>
     </dependencies>
     <repositories>
