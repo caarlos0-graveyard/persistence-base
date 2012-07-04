@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.caarlos0</groupId>
+    <groupId>com.github.sylvester</groupId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>Sylvester</name>
     <description>A persistence base for project, powered by Maven, Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and MySQL.</description>
     <url>http://caarlos0.github.com</url>

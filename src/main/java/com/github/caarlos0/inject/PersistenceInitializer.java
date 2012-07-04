@@ -11,7 +11,6 @@ public class PersistenceInitializer {
 
     @Inject
     public PersistenceInitializer(PersistService service) {
-        System.out.println("Starting persistence service...");
         service.start();
     }
 
