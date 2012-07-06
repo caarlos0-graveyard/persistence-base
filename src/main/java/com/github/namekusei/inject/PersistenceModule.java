@@ -19,7 +19,9 @@ public class PersistenceModule extends AbstractModule {
     @Override
     protected void configure() {
         install(new JpaPersistModule(pu));
-        bind(PersistenceInitializer.class);
+
+        // forcing it as a eager singleton, so it will start automagically with the app..
+        bind(PersistenceInitializer.class).asEagerSingleton();
     }
 
 }

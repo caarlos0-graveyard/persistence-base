@@ -5,6 +5,7 @@
     <groupId>com.github.namekusei</groupId>
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <artifactId>persistence</artifactId>
     <name>Namekusei / Persistence</name>
     <description>A persistence base for your project, powered by Maven, Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and MySQL.</description>
     <url>http://caarlos0.github.com</url>
@@ -24,7 +25,15 @@
             <url>http://github.com/lucasmerencia</url>
         </developer>
     </developers>
-  
+
+    <scm>
+        <connection>scm:git:git@github.com:namekusei/persistence.git</connection>
+        <url>scm:git:git@github.com:namekusei/persistence.git</url>
+        <developerConnection>scm:git:git@github.com:namekusei/persistence.git</developerConnection>
+    </scm>
+
+
+
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -53,6 +62,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.20</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -121,5 +131,16 @@
             <name>Repository for library Library[eclipselink]</name>
         </repository>
     </repositories>
-    <artifactId>persistence</artifactId>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

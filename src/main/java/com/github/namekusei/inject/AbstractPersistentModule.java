@@ -7,6 +7,8 @@ import com.google.common.base.Preconditions;
 import com.google.inject.AbstractModule;
 import com.google.inject.Key;
 import com.google.inject.TypeLiteral;
+import com.google.inject.binder.AnnotatedBindingBuilder;
+import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.binder.ScopedBindingBuilder;
 import com.google.inject.util.Types;
 
@@ -25,7 +27,7 @@ public abstract class AbstractPersistentModule extends AbstractModule {
      * @param type bean type to let inject a genericdao.
      * @param <T>
      */
-    protected <T extends Bean> ScopedBindingBuilder bindGenericDao(Class<T> type) {
+    protected <T extends Bean> ScopedBindingBuilder bindGenericDaoFor(Class<T> type) {
         Preconditions.checkArgument(type != null, "Type must not be null.");
 
         return new DaoTypeLiteralHelper<T>(type).bind();
