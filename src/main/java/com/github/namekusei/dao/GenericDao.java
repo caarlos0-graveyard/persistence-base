@@ -1,15 +1,17 @@
 package com.github.namekusei.dao;
 
-import com.github.namekusei.model.Bean;
-import com.google.common.base.Preconditions;
-import com.google.inject.Provider;
-import com.google.inject.TypeLiteral;
-import com.google.inject.persist.Transactional;
+import static com.google.common.base.Preconditions.checkArgument;
+
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import java.util.List;
+
+import com.github.namekusei.model.Bean;
+import com.google.inject.Provider;
+import com.google.inject.TypeLiteral;
+import com.google.inject.persist.Transactional;
 
 /**
  * Create your specific DAO extending this class, override the constructor ths way:
@@ -31,9 +33,10 @@ public class GenericDao<T extends Bean> implements Dao<T> {
     private final Provider<EntityManager> emp;
     private final Class<T> clazz;
 
-    @Inject
+    @SuppressWarnings("unchecked")
+	@Inject
     protected GenericDao(TypeLiteral<T> type, Provider<EntityManager> emp) {
-        Preconditions.checkArgument(type != null, "type must not be null.");
+        checkArgument(type != null, "type must not be null.");
         this.clazz = (Class<T>) type.getRawType();
         this.emp = emp;
     }

@@ -13,7 +13,9 @@ import java.util.Date;
 @Entity
 public class MyBean extends Bean {
 
-    public String foo, bar;
+	private static final long serialVersionUID = 1L;
+
+	public String foo, bar;
 
     @Temporal(value = TemporalType.TIMESTAMP)
     public Date d;

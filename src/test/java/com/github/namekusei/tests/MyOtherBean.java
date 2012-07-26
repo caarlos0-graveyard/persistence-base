@@ -10,7 +10,8 @@ import javax.persistence.Entity;
 @Entity
 public class MyOtherBean extends Bean {
 
-    public String name;
+	private static final long serialVersionUID = 1L;
+	public String name;
 
     public MyOtherBean() {
     }

@@ -4,3 +4,5 @@ target/
 settings.xml
 .idea/
 *.iml
+.classpath
+.project

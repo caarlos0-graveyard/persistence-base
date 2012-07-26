@@ -1,14 +1,16 @@
 package com.github.namekusei.tests;
 
+import java.util.Date;
+
+import junit.framework.Assert;
+
+import org.junit.Test;
+
 import com.github.namekusei.dao.Dao;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.TypeLiteral;
-import junit.framework.Assert;
-import org.junit.Test;
-
-import java.util.Date;
 
 /**
  * @author: Carlos A Becker
