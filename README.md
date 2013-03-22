@@ -12,9 +12,9 @@ A base for all your persistence projects, build in top of:
 
 ### Providing
 
-* A `MappedSuperclass` with `@Id` and `@Version` (see the `Bean` class)
-* A `GenericDao` that provide basic CRUD operations out of the box
-* A `AbstractPersistentModule` to extend and do thing like:
+* A `MappedSuperclass` with `@Id` and `@Version` (see the `Bean` class);
+* A `GenericDao` that provide basic CRUD operations out of the box;
+* An `AbstractPersistentModule` to you extend and do things like:
   
   // module setup
   bindGenericDaoFor(MyBean.class);
