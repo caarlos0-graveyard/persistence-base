@@ -1,16 +1,43 @@
-namekusei / persistence
+persistence-base
 ================
 
-### Tecnologies
+### Why did I built this?
 
-A base for all your persistence projects, build in top of:
+In my post-graduation classes, I had to build a lot of simple projects
+with only persistence in one grade. So, I built this because I'm lazy.
+
+### Tecnology
+
+This project is built on top of the following tecnologies:
 
 * EclipseLink and JPA2
-* Apache B-Val (bean validation)
+
+  EclipseLink is the reference implementation of JPA2 (JSR-317)
+  specification. I also found it a bit faster and "ligher" than
+  other ORMs, like Hibernate.
+
+* Apache B-Val
+
+  Implementation (not sure if is the reference one) of the JSR-303, which
+  _a meta-data model and API for JavaBeanTM validation based on defines
+  annotations, with overrides and extended meta-data through the use of
+  XML validation descriptors."_
+
 * Google Guice
+
+  Reference Implementation of the JSR-330, which helps _"to maximize reusability,
+  testability and maintainability of Java code by standardizing an extensible
+  dependency injection API"_.
+
 * Apache Maven
 
-### Providing
+  You know that it is.
+
+
+### What we provide
+
+We provide a set of useful classes which you can use to bootstrap your persistence
+project:
 
 * A `MappedSuperclass` with `@Id` and `@Version` (see the `Bean` class);
 * A `GenericDao` that provide basic CRUD operations out of the box;
@@ -23,17 +50,40 @@ And guice will automagically provide a `GenericDao<MyBean>` to you, so you can i
 
   // some class
   @Inject Dao<MyBean> myBeanDao;
+  
+You can also do something like 
+
+  bind(MyOtherDao.class).to(MyOtherBeanDaoImpl.class);
+
+in your module, and then, somewhere, just _inject_ it:
+
+  @Inject MyOtherDao myOtherDao;
+  
+And then use it like a boss.
 
 
 The `AbstractPersistentModule` will also startup the PersistenceService (Guice-Persist setup).
 
 ### How-to use
 
-coming soon...
+> comming soon (?)
+
+I recommend you to read the sources of the tests. It's a complete basic example, you should use
+it as a "light" for you.
 
 
+### Recommended use
+
+You can use this project as a base for you school project, or any other app. I'll recommend
+you to read the sources, and, change anything to adapts to what you may need.
+
+For school projects, it should be good enought in it's actual state. Just clone, rename and
+put the horses to work on what really matter.
 
 -------------
 
-You take a look at [this old tutorial of the old project](http://caarlos0.github.com/code/2012/06/25/modular-persistence).
+You might want to take a look at [this old tutorial of an old revision][1] of this project (you
+may want to use it at [0.0.1][2] tag).
 
+[1]: http://caarlos0.github.com/posts/modular-persistence/
+[2]: https://github.com/caarlos0/persistence-base/tree/v0.0.1
