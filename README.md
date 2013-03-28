@@ -42,22 +42,30 @@ project:
 * A `MappedSuperclass` with `@Id` and `@Version` (see the `Bean` class);
 * A `GenericDao` that provide basic CRUD operations out of the box;
 * An `AbstractPersistentModule` to you extend and do things like:
-  
-  // module setup
-  bindGenericDaoFor(MyBean.class);
+
+```java
+// module setup
+bindGenericDaoFor(MyBean.class);
+```
 
 And guice will automagically provide a `GenericDao<MyBean>` to you, so you can inject like this:
 
-  // some class
-  @Inject Dao<MyBean> myBeanDao;
+```java
+// some class
+@Inject Dao<MyBean> myBeanDao;
+```
   
 You can also do something like 
-
-  bind(MyOtherDao.class).to(MyOtherBeanDaoImpl.class);
+  
+```java
+bind(MyOtherDao.class).to(MyOtherBeanDaoImpl.class);
+```
 
 in your module, and then, somewhere, just _inject_ it:
 
-  @Inject MyOtherDao myOtherDao;
+```java
+@Inject MyOtherDao myOtherDao;
+```
   
 And then use it like a boss.
 
