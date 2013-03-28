@@ -1,10 +1,10 @@
 persistence-base
 ================
 
-### Why did I built this?
+### Why did I build this?
 
 In my post-graduation classes, I had to build a lot of simple projects
-with only persistence in one grade. So, I built this because I'm lazy.
+with only persistence in one grade. So, I build this because I'm lazy.
 
 ### Tecnology
 
