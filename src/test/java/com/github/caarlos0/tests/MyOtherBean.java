@@ -1,6 +1,6 @@
-package com.github.namekusei.tests;
+package com.github.caarlos0.tests;
 
-import com.github.namekusei.model.Bean;
+import com.github.caarlos0.model.Bean;
 
 import javax.persistence.Entity;
 

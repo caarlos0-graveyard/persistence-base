@@ -1,4 +1,4 @@
-package com.github.namekusei.tests;
+package com.github.caarlos0.tests;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import com.github.namekusei.dao.Dao;
+import com.github.caarlos0.dao.Dao;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;

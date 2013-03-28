@@ -1,4 +1,4 @@
-package com.github.namekusei.dao;
+package com.github.caarlos0.dao;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-import com.github.namekusei.model.Bean;
+import com.github.caarlos0.model.Bean;
 import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
 import com.google.inject.persist.Transactional;

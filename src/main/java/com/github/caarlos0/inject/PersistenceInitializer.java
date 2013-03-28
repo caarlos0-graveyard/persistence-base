@@ -1,4 +1,4 @@
-package com.github.namekusei.inject;
+package com.github.caarlos0.inject;
 
 import com.google.inject.persist.PersistService;
 

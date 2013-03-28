@@ -1,7 +1,7 @@
-package com.github.namekusei.tests;
+package com.github.caarlos0.tests;
 
-import com.github.namekusei.inject.AbstractPersistentModule;
-import com.github.namekusei.inject.PersistenceModule;
+import com.github.caarlos0.inject.AbstractPersistentModule;
+import com.github.caarlos0.inject.PersistenceModule;
 
 /**
  * @author: Carlos A Becker
@@ -9,8 +9,8 @@ import com.github.namekusei.inject.PersistenceModule;
 public class TestModule extends AbstractPersistentModule {
 	@Override
 	protected void configure() {
-		install(new PersistenceModule("namekusei"));
-		
+		install(new PersistenceModule("caarlos0"));
+
 		bindGenericDaoFor(MyBean.class);
 		bind(MyOtherDao.class).to(MyOtherBeanDaoImpl.class);
 	}

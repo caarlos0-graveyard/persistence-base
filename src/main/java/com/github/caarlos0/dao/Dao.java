@@ -1,6 +1,6 @@
-package com.github.namekusei.dao;
+package com.github.caarlos0.dao;
 
-import com.github.namekusei.model.Bean;
+import com.github.caarlos0.model.Bean;
 
 import java.util.List;
 

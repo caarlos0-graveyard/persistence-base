@@ -1,9 +1,9 @@
-package com.github.namekusei.tests;
+package com.github.caarlos0.tests;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import com.github.namekusei.dao.GenericDao;
+import com.github.caarlos0.dao.GenericDao;
 import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
 

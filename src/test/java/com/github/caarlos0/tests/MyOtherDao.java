@@ -1,6 +1,6 @@
-package com.github.namekusei.tests;
+package com.github.caarlos0.tests;
 
-import com.github.namekusei.dao.Dao;
+import com.github.caarlos0.dao.Dao;
 
 /**
  * @author: Carlos A Becker

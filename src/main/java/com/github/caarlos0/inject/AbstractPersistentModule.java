@@ -1,12 +1,12 @@
-package com.github.namekusei.inject;
+package com.github.caarlos0.inject;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
 import java.lang.reflect.Type;
 
-import com.github.namekusei.dao.Dao;
-import com.github.namekusei.dao.GenericDao;
-import com.github.namekusei.model.Bean;
+import com.github.caarlos0.dao.Dao;
+import com.github.caarlos0.dao.GenericDao;
+import com.github.caarlos0.model.Bean;
 import com.google.inject.AbstractModule;
 import com.google.inject.Key;
 import com.google.inject.TypeLiteral;
@@ -15,7 +15,7 @@ import com.google.inject.util.Types;
 
 /**
  * A abstract Guice module that lets you bind a {@link GenericDao} to a type.
- * 
+ *
  * @author Carlos A Becker
  */
 public abstract class AbstractPersistentModule extends AbstractModule {
@@ -23,7 +23,7 @@ public abstract class AbstractPersistentModule extends AbstractModule {
 	/**
 	 * Creates a implementation of a {@link GenericDao} for the given type and
 	 * made it managed by guice.
-	 * 
+	 *
 	 * @param type
 	 *            bean type to let inject a genericdao.
 	 * @param <T>
@@ -41,7 +41,7 @@ public abstract class AbstractPersistentModule extends AbstractModule {
 //		DaoTypeLiteralHelper<T> helper = new DaoTypeLiteralHelper<T>(type);
 //		return bind(daoType).to(TypeLiteral.get(Types.newParameterizedType(GenericDao.class, type, Key.get(type).getClass())));
 //	}
-	
+
 
 	private class DaoTypeLiteralHelper<T extends Bean> {
 

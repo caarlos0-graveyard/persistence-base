@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.namekusei</groupId>
+	<groupId>com.github.caarlos0</groupId>
 	<packaging>jar</packaging>
 	<version>0.0.3-SNAPSHOT</version>
 	<artifactId>persistence</artifactId>
-	<name>Namekusei / Persistence</name>
+	<name>caarlos0 / Persistence</name>
 	<description>A persistence base for your project, powered by Maven, Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and MySQL.</description>
 	<url>http://caarlos0.github.com</url>
 	<developers>
@@ -20,13 +20,13 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com:namekusei/persistence.git</connection>
-		<url>scm:git:git@github.com:namekusei/persistence.git</url>
-		<developerConnection>scm:git:git@github.com:namekusei/persistence.git</developerConnection>
+		<connection>scm:git:git@github.com:caarlos0/persistence.git</connection>
+		<url>scm:git:git@github.com:caarlos0/persistence.git</url>
+		<developerConnection>scm:git:git@github.com:caarlos0/persistence.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
-	<distributionManagement>
+<!-- 	<distributionManagement>
 		<repository>
 			<id>com.github.caarlos0</id>
 			<name>caarlos0 Snapshot repository</name>
@@ -40,8 +40,7 @@
 			<url>http://caarlos0.github.com/maven/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-
+ -->
 
 	<properties>
 		<maven.compiler.source>1.6</maven.compiler.source>

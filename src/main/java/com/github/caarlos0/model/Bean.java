@@ -1,4 +1,4 @@
-package com.github.namekusei.model;
+package com.github.caarlos0.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -16,7 +16,7 @@ public abstract class Bean implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @Version
     private Long version;
 
