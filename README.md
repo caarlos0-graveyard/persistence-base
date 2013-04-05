@@ -1,5 +1,6 @@
-persistence-base
-================
+persistence-base [![Build Status](https://travis-ci.org/caarlos0/persistence-base.png?branch=master)](https://travis-ci.org/caarlos0/persistence-base)
+===========================
+
 
 ### Why did I build this?
 
