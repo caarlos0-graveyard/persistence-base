@@ -14,19 +14,18 @@ import com.google.inject.binder.ScopedBindingBuilder;
 import com.google.inject.util.Types;
 
 /**
- * A abstract Guice module that lets you bind a {@link GenericDao} to a type.
- *
+ * An abstract Guice module that lets you bind a {@link GenericDao} to a type.
+ * 
  * @author Carlos A Becker
  */
 public abstract class AbstractPersistentModule extends AbstractModule {
 
 	/**
 	 * Creates a implementation of a {@link GenericDao} for the given type and
-	 * made it managed by guice.
-	 *
+	 * made it managed by Guice.
+	 * 
 	 * @param type
-	 *            bean type to let inject a genericdao.
-	 * @param <T>
+	 *            the bean type which a GenericDao instance should be binded.
 	 */
 	protected <T extends Bean> ScopedBindingBuilder bindGenericDaoFor(
 			Class<T> type) {
@@ -35,14 +34,13 @@ public abstract class AbstractPersistentModule extends AbstractModule {
 		return new DaoTypeLiteralHelper<T>(type).bind();
 	}
 
-//	protected <T extends Bean> ScopedBindingBuilder bindGenericDaoFor(Class<T> type, Class<? extends Dao<T>> daoType) {
-//		checkArgument(type != null, "Type must not be null.");
-//
-//		DaoTypeLiteralHelper<T> helper = new DaoTypeLiteralHelper<T>(type);
-//		return bind(daoType).to(TypeLiteral.get(Types.newParameterizedType(GenericDao.class, type, Key.get(type).getClass())));
-//	}
-
-
+	/**
+	 * Helper Class for GenericDAO bindings.
+	 * 
+	 * @author Carlos A. Becker
+	 * 
+	 * @param <T>
+	 */
 	private class DaoTypeLiteralHelper<T extends Bean> {
 
 		private Class<T> type;

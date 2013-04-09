@@ -4,11 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.caarlos0</groupId>
 	<packaging>jar</packaging>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<artifactId>persistence</artifactId>
-	<name>caarlos0 / Persistence</name>
-	<description>A persistence base for your project, powered by Maven, Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and MySQL.</description>
-	<url>http://caarlos0.github.com</url>
+	<name>caarlos0/persistence-base</name>
+	<description>A persistence base for your project, powered by Maven,
+		Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and
+		MySQL.</description>
+	<url>http://carlosbecker.com</url>
 	<developers>
 		<developer>
 			<id>caarlos0</id>
@@ -20,36 +22,22 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com:caarlos0/persistence.git</connection>
+		<connection>scm:git:git@github.com:caarlos0/persistence.git
+		</connection>
 		<url>scm:git:git@github.com:caarlos0/persistence.git</url>
-		<developerConnection>scm:git:git@github.com:caarlos0/persistence.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:caarlos0/persistence.git
+		</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-
-<!-- 	<distributionManagement>
-		<repository>
-			<id>com.github.caarlos0</id>
-			<name>caarlos0 Snapshot repository</name>
-			<uniqueVersion>false</uniqueVersion>
-			<url>http://caarlos0.github.com/maven/release</url>
-		</repository>
-		<snapshotRepository>
-			<id>com.github.caarlos0</id>
-			<name>caarlos0 Snapshot repository</name>
-			<uniqueVersion>false</uniqueVersion>
-			<url>http://caarlos0.github.com/maven/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
- -->
 
 	<properties>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<guice.version>3.0</guice.version>
-		<guava.version>12.0</guava.version>
-		<slf4jVersion>1.6.4</slf4jVersion>
-		<bval.version>0.4</bval.version>
+		<guava.version>14.0.1</guava.version>
+		<slf4jVersion>1.7.5</slf4jVersion>
+		<bval.version>0.5</bval.version>
 		<jpa.version>2.0.3</jpa.version>
 		<eclipselink.version>2.4.0</eclipselink.version>
 	</properties>
@@ -58,7 +46,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.10</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -69,7 +57,7 @@
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
-			<version>2.2.8</version>
+			<version>2.2.9</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -84,7 +72,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+			<artifactId>org.eclipse.persistence.jpa.modelgen.processor
+			</artifactId>
 			<version>${eclipselink.version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -130,7 +119,8 @@
 	<repositories>
 		<repository>
 			<id>EclipseLink Repo</id>
-			<url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
+			<url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo
+			</url>
 		</repository>
 		<repository>
 			<url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
@@ -146,7 +136,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>2.4.1</version>
 			</plugin>
 
 			<plugin>
@@ -154,7 +144,8 @@
 				<artifactId>downloads-maven-plugin</artifactId>
 				<version>0.5</version>
 				<configuration>
-					<description>${project.version} release of ${project.name}</description>
+					<description>${project.version} release of ${project.name}
+					</description>
 					<override>true</override>
 					<includeAttached>true</includeAttached>
 				</configuration>
@@ -176,10 +167,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
-
-
 	</build>
-
 </project>

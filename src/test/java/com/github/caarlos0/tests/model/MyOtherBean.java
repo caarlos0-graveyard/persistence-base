@@ -1,4 +1,4 @@
-package com.github.caarlos0.tests;
+package com.github.caarlos0.tests.model;
 
 import com.github.caarlos0.model.Bean;
 

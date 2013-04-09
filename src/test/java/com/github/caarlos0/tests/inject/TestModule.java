@@ -1,7 +1,10 @@
-package com.github.caarlos0.tests;
+package com.github.caarlos0.tests.inject;
 
 import com.github.caarlos0.inject.AbstractPersistentModule;
 import com.github.caarlos0.inject.PersistenceModule;
+import com.github.caarlos0.tests.dao.MyOtherBeanDaoImpl;
+import com.github.caarlos0.tests.dao.MyOtherDao;
+import com.github.caarlos0.tests.model.MyBean;
 
 /**
  * @author: Carlos A Becker
