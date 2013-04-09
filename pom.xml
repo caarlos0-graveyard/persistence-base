@@ -5,7 +5,7 @@
 	<groupId>com.github.caarlos0</groupId>
 	<packaging>jar</packaging>
 	<version>0.0.4-SNAPSHOT</version>
-	<artifactId>persistence</artifactId>
+	<artifactId>persistence-base</artifactId>
 	<name>caarlos0/persistence-base</name>
 	<description>A persistence base for your project, powered by Maven,
 		Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and
