@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.caarlos0</groupId>
 	<packaging>jar</packaging>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.5</version>
 	<artifactId>persistence-base</artifactId>
 	<name>caarlos0/persistence-base</name>
 	<description>A persistence base for your project, powered by Maven,
@@ -25,7 +25,7 @@
 		<url>scm:git:git@github.com:caarlos0/persistence.git</url>
 		<developerConnection>scm:git:git@github.com:caarlos0/persistence.git
 		</developerConnection>
-		<tag>HEAD</tag>
+		<tag>persistence-base-0.0.5</tag>
 	</scm>
 
 	<properties>
