@@ -40,6 +40,17 @@
 		<eclipselink.version>2.4.0</eclipselink.version>
 	</properties>
 
+	<distributionManagement>
+    <repository>
+      <id>repo</id>
+      <url>https://github.com/caarlos0/maven/raw/master/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <url>https://github.com/caarlos0/maven/raw/master/snapshots</url>
+    </snapshotRepository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
