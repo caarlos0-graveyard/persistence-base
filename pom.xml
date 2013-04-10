@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.caarlos0</groupId>
 	<packaging>jar</packaging>
-	<version>0.0.5</version>
+	<version>0.0.6-SNAPSHOT</version>
 	<artifactId>persistence-base</artifactId>
 	<name>caarlos0/persistence-base</name>
 	<description>A persistence base for your project, powered by Maven,
@@ -20,6 +20,8 @@
 	</developers>
 
 	<scm>
+		<!-- mvn -DaltDeploymentRepository=snapshot-repo::default::file:../maven/snapshots clean deploy
+ -->
 		<connection>scm:git:git@github.com:caarlos0/persistence.git
 		</connection>
 		<url>scm:git:git@github.com:caarlos0/persistence.git</url>
