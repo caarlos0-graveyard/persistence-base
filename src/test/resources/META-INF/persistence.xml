@@ -4,6 +4,7 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>com.github.caarlos0.tests.model.MyBean</class>
         <class>com.github.caarlos0.tests.model.MyOtherBean</class>
+        <class>com.github.caarlos0.tests.model.MyTimestampedBean</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:caarlos0"/>
             <property name="javax.persistence.jdbc.password" value=""/>
