@@ -2,6 +2,7 @@ package com.github.caarlos0.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,9 +22,11 @@ public abstract class Bean implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private Long id;
 
 	@Version
+	@Column(name = "version")
 	private Long version;
 
 	public Bean(Long id, Long version) {

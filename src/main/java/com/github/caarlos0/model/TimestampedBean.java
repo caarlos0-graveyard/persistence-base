@@ -2,6 +2,7 @@ package com.github.caarlos0.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
@@ -25,9 +26,11 @@ public abstract class TimestampedBean extends Bean {
 	}
 
 	@Temporal(value = TemporalType.TIMESTAMP)
+	@Column(name = "created_at")
 	private Date createdAt;
 
 	@Temporal(value = TemporalType.TIMESTAMP)
+	@Column(name = "updated_at")
 	private Date updatedAt;
 
 	public Date getCreatedAt() {
