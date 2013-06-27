@@ -86,10 +86,10 @@ The `AbstractPersistentModule` will also startup the PersistenceService
 
 ### How-to use
 
-> comming soon (?)
+Please, read [this post about persistence-base](http://carlosbecker.com/posts/persistence-base/)
 
-I recommend you to read the sources of the tests. It's a complete basic example,
-you should use it as a "light" for you.
+I would also recommend you to read the sources of the tests. It's a complete
+basic example, you should use it as a "light" for you.
 
 
 ### Recommended use
