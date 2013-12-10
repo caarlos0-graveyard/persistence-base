@@ -1,5 +1,8 @@
 package com.github.caarlos0.tests;
 
+import static com.google.common.collect.FluentIterable.from;
+import static org.junit.Assert.assertNotEquals;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,6 +16,8 @@ import com.github.caarlos0.tests.inject.TestModule;
 import com.github.caarlos0.tests.model.SortableBean;
 import com.github.caarlos0.tests.runner.GuiceTestRunner;
 import com.github.caarlos0.tests.runner.GuiceTestRunner.GuiceModules;
+import com.google.common.base.Function;
+import com.google.common.collect.ImmutableSet;
 
 @RunWith(GuiceTestRunner.class)
 @GuiceModules(TestModule.class)
@@ -31,7 +36,8 @@ public class SortableTests {
 		}
 
 		System.out.println("BEFORE");
-		for (SortableBean bean : dao.findAll()) {
+		List<SortableBean> beforeItens = dao.findAll();
+		for (SortableBean bean : beforeItens) {
 			System.out.println("Sortable " + bean.getId() + " - "
 					+ bean.getPosition() + " - " + bean.getVersion());
 		}
@@ -39,9 +45,44 @@ public class SortableTests {
 		dao.move(beans.get(3), 0);
 
 		System.out.println("AFTER");
-		for (SortableBean bean : dao.findAll()) {
+		List<SortableBean> afterItens = dao.findAll();
+		for (SortableBean bean : afterItens) {
 			System.out.println("Sortable " + bean.getId() + " - "
 					+ bean.getPosition() + " - " + bean.getVersion());
+		}
+
+		// order must be changed, so it should be different.
+		assertNotEquals("Order of ids must have been changed",
+				toIdList(beforeItens), toIdList(afterItens));
+		
+		assertNotEquals("It should not have duplicated positions",
+				removeDuplicates(toPositionList(beforeItens)).size(),
+				removeDuplicates(toPositionList(afterItens)).size());
+	}
+	
+	private <T> List<T> removeDuplicates(List<T> itens) {
+		return ImmutableSet.copyOf(itens).asList();
+	}
+	
+	private List<Long> toIdList(List<SortableBean> itens) {
+		return from(itens).transform(new IdFunction()).toList();
+	}
+	
+	private List<Integer> toPositionList(List<SortableBean> itens) {
+		return from(itens).transform(new PositionFunction()).toList();
+	}
+
+	private class IdFunction implements Function<SortableBean, Long> {
+		@Override
+		public Long apply(SortableBean bean) {
+			return bean.getId();
+		}
+	}
+	
+	private class PositionFunction implements Function<SortableBean, Integer> {
+		@Override
+		public Integer apply(SortableBean bean) {
+			return bean.getPosition();
 		}
 	}
 }
