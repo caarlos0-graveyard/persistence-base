@@ -31,13 +31,11 @@ public class SortableDaoImpl extends GenericDao<SortableBean> implements
 		if (newPosition != oldPosition) {
 			final List<Integer> positions = asList(newPosition, oldPosition);
 			final Ordering<Integer> ordering = natural();
-			System.out.println("INITIAL=" + ordering.min(positions) + " FINAL="
-					+ ordering.max(positions));
-			int count = em().createNamedQuery("SortableBean.updatePositions")
+			em().createNamedQuery("SortableBean.updatePositions")
 					.setParameter("initialPosition", ordering.min(positions))
 					.setParameter("finalPosition", ordering.max(positions))
 					.executeUpdate();
-			System.out.println("UPDATED " + count + " ITEMS");
+			em().clear();
 			sortable.setPosition(newPosition);
 			save(sortable);
 		}

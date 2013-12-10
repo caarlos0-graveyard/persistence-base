@@ -70,7 +70,10 @@ public class SortableBean extends TimestampedBean {
 		return true;
 	}
 
-	
-	
-	
+	@Override
+	public String toString() {
+		return "SortableBean [position=" + position + ", super.toString()="
+				+ super.toString() + "]";
+	}
+
 }

@@ -1,6 +1,7 @@
 package com.github.caarlos0.tests;
 
 import static com.google.common.collect.FluentIterable.from;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 import java.util.Arrays;
@@ -55,7 +56,7 @@ public class SortableTests {
 		assertNotEquals("Order of ids must have been changed",
 				toIdList(beforeItens), toIdList(afterItens));
 		
-		assertNotEquals("It should not have duplicated positions",
+		assertEquals("It should not have duplicated positions",
 				removeDuplicates(toPositionList(beforeItens)).size(),
 				removeDuplicates(toPositionList(afterItens)).size());
 	}
