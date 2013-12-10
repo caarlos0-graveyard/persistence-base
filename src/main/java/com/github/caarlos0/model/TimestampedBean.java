@@ -49,13 +49,6 @@ public abstract class TimestampedBean extends Bean {
 		this.updatedAt = updatedAt;
 	}
 
-	@Override
-	public String toString() {
-		return "TimestampedBean [createdAt=" + getCreatedAtTime()
-				+ ", updatedAt=" + getUpdatedAtTime() + ", "
-				+ super.toString() + "]";
-	}
-
 	private long getUpdatedAtTime() {
 		if (updatedAt == null) {
 			return -1L;
@@ -69,5 +62,44 @@ public abstract class TimestampedBean extends Bean {
 		}
 		return createdAt.getTime();
 	}
+	
+	@Override
+	public String toString() {
+		return "TimestampedBean [createdAt=" + getCreatedAtTime()
+				+ ", updatedAt=" + getUpdatedAtTime() + ", " + super.toString()
+				+ "]";
+	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result
+				+ ((createdAt == null) ? 0 : createdAt.hashCode());
+		result = prime * result
+				+ ((updatedAt == null) ? 0 : updatedAt.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TimestampedBean other = (TimestampedBean) obj;
+		if (createdAt == null) {
+			if (other.createdAt != null)
+				return false;
+		} else if (!createdAt.equals(other.createdAt))
+			return false;
+		if (updatedAt == null) {
+			if (other.updatedAt != null)
+				return false;
+		} else if (!updatedAt.equals(other.updatedAt))
+			return false;
+		return true;
+	}
 }
