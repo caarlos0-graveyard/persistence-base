@@ -13,7 +13,7 @@ import com.github.caarlos0.model.TimestampedBean;
 @Table(name = "sortables")
 @NamedQueries({
 		@NamedQuery(name = "SortableBean.findAll", query = "select s from SortableBean s order by s.position"),
-		@NamedQuery(name = "SortableBean.updatePositions", query = "update SortableBean s set s.position = s.position + 1 where s.position between :initialPosition and :finalPosition - 1") })
+		@NamedQuery(name = "SortableBean.updatePositions", query = "update SortableBean s set s.position = s.position + 1 where s.position >= :initialPosition and s.position < :finalPosition") })
 public class SortableBean extends TimestampedBean {
 
 	private static final long serialVersionUID = 1L;
