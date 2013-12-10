@@ -1,5 +1,6 @@
 package com.github.caarlos0.tests;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -31,6 +32,7 @@ public class CallbackTests {
 		t = dao.save(t);
 		assertNotNull(t.getCreatedAt());
 		assertNotNull(t.getUpdatedAt());
+		assertEquals(t.getCreatedAt(), t.getUpdatedAt());
 	}
 
 	/**

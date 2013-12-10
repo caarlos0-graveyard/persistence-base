@@ -88,6 +88,17 @@
 			<version>${eclipselink.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- <dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.8.Final</version>
+		</dependency> -->
+
 		<dependency>
 			<groupId>org.glassfish.external</groupId>
 			<artifactId>commons-codec-repackaged</artifactId>
