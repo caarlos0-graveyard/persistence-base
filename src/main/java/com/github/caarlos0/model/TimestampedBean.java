@@ -51,9 +51,23 @@ public abstract class TimestampedBean extends Bean {
 
 	@Override
 	public String toString() {
-		return "TimestampedBean [createdAt=" + createdAt.getTime()
-				+ ", updatedAt=" + updatedAt.getTime() + ", "
+		return "TimestampedBean [createdAt=" + getCreatedAtTime()
+				+ ", updatedAt=" + getUpdatedAtTime() + ", "
 				+ super.toString() + "]";
+	}
+
+	private long getUpdatedAtTime() {
+		if (updatedAt == null) {
+			return -1L;
+		}
+		return updatedAt.getTime();
+	}
+
+	private long getCreatedAtTime() {
+		if (createdAt == null) {
+			return -1L;
+		}
+		return createdAt.getTime();
 	}
 
 }
