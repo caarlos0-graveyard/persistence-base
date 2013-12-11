@@ -4,6 +4,8 @@ import com.github.caarlos0.inject.AbstractPersistentModule;
 import com.github.caarlos0.inject.PersistenceModule;
 import com.github.caarlos0.tests.dao.MyOtherBeanDaoImpl;
 import com.github.caarlos0.tests.dao.MyOtherDao;
+import com.github.caarlos0.tests.dao.SortableDao;
+import com.github.caarlos0.tests.dao.SortableDaoImpl;
 import com.github.caarlos0.tests.model.MyBean;
 import com.github.caarlos0.tests.model.MyTimestampedBean;
 
@@ -18,5 +20,6 @@ public class TestModule extends AbstractPersistentModule {
 		bindGenericDaoFor(MyTimestampedBean.class);
 		bindGenericDaoFor(MyBean.class);
 		bind(MyOtherDao.class).to(MyOtherBeanDaoImpl.class);
+		bind(SortableDao.class).to(SortableDaoImpl.class);
 	}
 }
