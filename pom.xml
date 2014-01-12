@@ -5,9 +5,10 @@
 	<version>0.0.6-SNAPSHOT</version>
 	<artifactId>persistence-base</artifactId>
 	<name>caarlos0/persistence-base</name>
-	<description>A persistence base for your project, powered by Maven,
-		Eclipse-Link, Apache B-Val, Guice, Guava libraries, Guice-Persist and
-		MySQL.</description>
+	<description>
+		A persistence base for your project, powered by Maven,
+		Eclipse-Link, Apache B-Val, Guice, Guava libraries and Guice-Persist.
+	</description>
 	<url>http://carlosbecker.com</url>
 	<developers>
 		<developer>
@@ -20,8 +21,6 @@
 	</developers>
 
 	<scm>
-		<!-- mvn -DaltDeploymentRepository=snapshot-repo::default::file:../maven/snapshots clean deploy
- -->
 		<connection>scm:git:git@github.com:caarlos0/persistence.git
 		</connection>
 		<url>scm:git:git@github.com:caarlos0/persistence.git</url>
@@ -88,16 +87,6 @@
 			<version>${eclipselink.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>1.0.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.2.8.Final</version>
-		</dependency> -->
 
 		<dependency>
 			<groupId>org.glassfish.external</groupId>
@@ -138,21 +127,6 @@
 			<version>${guava.version}</version>
 		</dependency>
 	</dependencies>
-	<!-- <repositories>
-		<repository>
-			<id>EclipseLink Repo</id>
-			<url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo
-			</url>
-		</repository>
-		<repository>
-			<url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
-			<id>eclipselink</id>
-			<layout>default</layout>
-			<name>Repository for library Library[eclipselink]</name>
-		</repository>
-	</repositories> -->
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -166,7 +140,8 @@
 				<artifactId>downloads-maven-plugin</artifactId>
 				<version>0.5</version>
 				<configuration>
-					<description>${project.version} release of ${project.name}
+					<description>
+						${project.version} release of ${project.name}
 					</description>
 					<override>true</override>
 					<includeAttached>true</includeAttached>

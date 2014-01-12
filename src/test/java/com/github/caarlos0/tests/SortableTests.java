@@ -36,39 +36,27 @@ public class SortableTests {
 			dao.save(bean);
 		}
 
-		System.out.println("BEFORE");
 		List<SortableBean> beforeItens = dao.findAll();
-		for (SortableBean bean : beforeItens) {
-			System.out.println("Sortable " + bean.getId() + " - "
-					+ bean.getPosition() + " - " + bean.getVersion());
-		}
-
 		dao.move(beans.get(3), 0);
-
-		System.out.println("AFTER");
 		List<SortableBean> afterItens = dao.findAll();
-		for (SortableBean bean : afterItens) {
-			System.out.println("Sortable " + bean.getId() + " - "
-					+ bean.getPosition() + " - " + bean.getVersion());
-		}
 
 		// order must be changed, so it should be different.
 		assertNotEquals("Order of ids must have been changed",
 				toIdList(beforeItens), toIdList(afterItens));
-		
+
 		assertEquals("It should not have duplicated positions",
 				removeDuplicates(toPositionList(beforeItens)).size(),
 				removeDuplicates(toPositionList(afterItens)).size());
 	}
-	
+
 	private <T> List<T> removeDuplicates(List<T> itens) {
 		return ImmutableSet.copyOf(itens).asList();
 	}
-	
+
 	private List<Long> toIdList(List<SortableBean> itens) {
 		return from(itens).transform(new IdFunction()).toList();
 	}
-	
+
 	private List<Integer> toPositionList(List<SortableBean> itens) {
 		return from(itens).transform(new PositionFunction()).toList();
 	}
@@ -79,7 +67,7 @@ public class SortableTests {
 			return bean.getId();
 		}
 	}
-	
+
 	private class PositionFunction implements Function<SortableBean, Integer> {
 		@Override
 		public Integer apply(SortableBean bean) {

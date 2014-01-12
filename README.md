@@ -50,6 +50,8 @@ We provide a set of useful classes which you can use to bootstrap your
 persistence project:
 
 * A `MappedSuperclass` with `@Id` and `@Version` (see the `Bean` class);
+* A `MappedSuperclass` with `@Id` and `@Version` and `updated_at` and
+`created_at` columns, just like Rails (see the `TimestampedBean` class);
 * A `GenericDao` that provide basic CRUD operations out of the box;
 * An `AbstractPersistentModule` to you extend and do things like:
 
